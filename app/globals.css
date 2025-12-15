@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+ --background: 210 11% 8%;
+    --foreground: 210 20% 90%;
+
+    --card: 210 15% 12%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 210 15% 12%;
+    --popover-foreground: 210 20% 90%;
+
+    /* Neon cyan primary */
+    --primary: 190 100% 60%;
+    --primary-foreground: 210 11% 8%;
+
+    /* Dark secondary */
+    --secondary: 210 15% 16%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 210 15% 20%;
+    --muted-foreground: 210 10% 60%;
+
+    /* Neon green accent */
+    --accent: 140 100% 60%;
+    --accent-foreground: 210 11% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 90%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 16%;
+    --ring: 190 100% 60%;
+
+    --radius: 0.5rem;
+
+    /* Custom code theme tokens */
+    --terminal-bg: 210 15% 10%;
+    --terminal-border: 210 15% 25%;
+    --terminal-green: 140 100% 60%;
+    --terminal-yellow: 50 100% 70%;
+    --terminal-purple: 280 100% 70%;
+    --terminal-red: 0 100% 70%;
+    
+    /* Console meter colors */
+    --meter-bg: 210 15% 16%;
+    --meter-fill: 190 100% 60%;
+    --meter-high: 140 100% 60%;
+    --meter-medium: 50 100% 70%;
+    --meter-low: 0 100% 70%;
+
+    /* Glow effects */
+    --glow-primary: 0 0 20px hsl(190 100% 60% / 0.5);
+    --glow-accent: 0 0 20px hsl(140 100% 60% / 0.5);
+    --glow-purple: 0 0 20px hsl(280 100% 70% / 0.5);
+
+    /* Background gradients */
+    --gradient-radial-primary: radial-gradient(circle at center, hsl(190 100% 60% / 0.15), transparent 70%);
+    --gradient-radial-accent: radial-gradient(circle at center, hsl(140 100% 60% / 0.12), transparent 70%);
+    --gradient-mesh: linear-gradient(135deg, hsl(210 11% 8%) 0%, hsl(210 15% 10%) 50%, hsl(210 11% 8%) 100%);
+
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: hsl(var(--font-geist-mono));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground)); 
+  --color-tertiary: hsl(var(--tertiary));
+  --color-tertiary-foreground: hsl(var(--tertiary-foreground)); 
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground)); 
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-radius: var(--radius);  
+  --color-gradient-radial-primary: hsl(var(--gradient-radial-primary));
+  --color-gradient-radial-accent: var(--gradient-radial-accent);
+  --color-gradient-mesh: hsl(var(--gradient-mesh));
+  --color-glow-primary: hsl(var(--glow-primary));
+  --color-destructive: hsl(var(--destructive));
+  --color-terminal-yellow: hsl(var(--terminal-yellow));
+  --color-terminal-green: hsl(var(--terminal-green));
+  --color-terminal-purple: hsl(var(--terminal-purple));
+  --color-terminal-red: hsl(var(--terminal-red));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-meter-bg: hsl(var(--meter-bg));
+  --color-glow-accent: hsl(var(--glow-accent));
+
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--secondary-foreground));
+  font-family: Arial, Helvetica, sans-serif;
+}
